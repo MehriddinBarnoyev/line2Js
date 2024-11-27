@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDP Academy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: "#1a2238",
+              "navy-light": "#232b45",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 30s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen">
+    <!-- header -->
+    <nav class="bg-white shadow">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <div class="flex items-center gap-8">
+          <a href="/" class="flex items-center gap-2">
+            <div class="w-10 h-10 -500"></div>
+            <img
+              src="https://pdp.uz/static/media/dark-logo.b60d4801fba35368079b1552cb52c715.svg"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:flex gap-6">
+            <a href="/online" class="text-gray-700 hover:text-gray-900"
+              >Online kurslar</a
+            >
+            <a href="/offline" class="text-gray-700 hover:text-gray-900"
+              >Offline kurslar</a
+            >
+            <a href="/junior" class="text-gray-700 hover:text-gray-900"
+              >"Junior" loyihasi</a
+            >
+          </div>
+        </div>
+        <a
+          href="tel:+998787774747"
+          class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors"
+        >
+        <i class="fa-solid fa-phone"></i> +998 (78) 777 47 47
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero part -->
+    <div class="container mx-auto px-4 py-16 text-center">
+      <div
+        class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm mb-6"
+      >
+        Offline kurslar
+      </div>
+
+      <h1 class="text-4xl md:text-4xl font-bold mb-6 max-w-4xl mx-auto">
+        DASTURLASHNI PROFESSIONALLARDAN O'RGANING!
+      </h1>
+
+      <p class="text-gray-600 mb-8 max-w-3xl mx-auto">
+        "PDP Academy" — dasturlashning ko'p sonli yo'nalishlariga to'liq
+        ixtisoslashgan, bugunacha 10 000 dan ziyod o'quvchilarga ega bo'lgan ilm
+        maskani
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 mb-16">
+        <button
+          class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
+        >
+          Bepul konsultatsiya olish
+        </button>
+        <button
+          class="border border-green-500 text-green-500 px-6 py-3 rounded-lg hover:bg-green-50 transition-colors"
+        >
+          Akademiya haqida
+        </button>
+      </div>
+
+      <!-- Partners Marquee -->
+      <div class="marquee">
+        <div class="marquee-content">
+          <div class="flex items-center gap-16 py-8">
+            <img
+              src="https://api.logobank.uz/media/logos_png/asaxiy-01.png"
+              alt="Asaxiy"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://api.logobank.uz/media/logos_png/%D0%A3%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B1%D0%B0%D0%BD%D0%BA-01.png"
+              alt="SQB"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://cbu.uz/upload/iblock/8ae/image_2022_08_01_15_35_28.png"
+              alt="Asakabank"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://api.logobank.uz/media/logos_png/infin-01.png"
+              alt="InfinBank"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
+              alt="Visa"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://marketing.uz/uploads/articles/2767/article-original.png"
+              alt="Tenge Bank"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://api.logobank.uz/media/logos_png/Kadastr_agentligi-01.png"
+              alt="Kadastr"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Upwork-logo.svg/2560px-Upwork-logo.svg.png"
+              alt="Upwork"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://api.logobank.uz/media/logos_png/Uzum-01.png"
+              alt="Uzum"
+              class="h-10 transition-all"
+            />
+            <img
+              src="https://api.logobank.uz/media/logos_png/Click-01_hjB080W.png"
+              alt="Click"
+              class="h-10 transition-all"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- main 1 -->
+    <main class="px-4 py-16 bg-navy">
+      <div class="container mx-auto">
+        <h1 class="text-green-500 text-4xl font-bold mb-4">Bizning kurslar</h1>
+        <p class="text-gray-300 mb-12 max-w-3xl">
+          Bu ko'plab IT kompaniyalarni o'z ichiga oluvchi PDP Valley ekotizimini
+          barpo etishdagi navbatdagi qadam.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Standard Card -->
+          <div class="bg-navy-light rounded-2xl p-8 relative overflow-hidden">
+            <h2 class="text-yellow-400 text-3xl font-bold mb-8">Standart</h2>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Davomiyligi</p>
+                <p class="text-white text-2xl font-bold">10 oy</p>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">1 oylik dars soatlari</p>
+                <p class="text-white text-2xl font-bold">36 soat</p>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Online kursga chegirma</p>
+                <p class="text-white text-2xl font-bold">50 %</p>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="text-white text-xl mb-4">Imkoniyatlar</h3>
+              <ul class="space-y-4 text-gray-300">
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  O'qish va ishdan ajralmagan holda kechki vaqtlarda ta'lim
+                  olish
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  Online darslarning 1-modulini bepul ko'rish imkoniyati
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  Jetbrains dasturlaridan bepul foydalanish imkoniyati
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              Kursga yozilish
+            </button>
+          </div>
+
+          <!-- Bootcamp Card -->
+          <div class="bg-navy-light rounded-2xl p-8 relative overflow-hidden">
+            <h2 class="text-yellow-400 text-3xl font-bold mb-8">Bootcamp</h2>
+
+            <div class="grid grid-cols-3 gap-4 mb-8">
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Davomiyligi</p>
+                <p class="text-white text-2xl font-bold">8 oy</p>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">1 oylik dars soatlari</p>
+                <p class="text-white text-2xl font-bold">80 soat</p>
+              </div>
+              <div>
+                <p class="text-gray-400 text-sm mb-1">Online kursga chegirma</p>
+                <p class="text-white text-2xl font-bold">80 %</p>
+              </div>
+            </div>
+
+            <div class="mb-8">
+              <h3 class="text-white text-xl mb-4">Imkoniyatlar</h3>
+              <ul class="space-y-4 text-gray-300">
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  Online darslarning 1-modulini bepul ko'rish imkoniyati
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  Jetbrains dasturlaridan bepul foydalanish imkoniyati
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  Har bir guruh uchun 2 tadan Ustoz
+                </li>
+                <li class="flex items-center gap-3">
+                  <div class="w-5 h-5 rounded-full bg-green-500/20"></div>
+                  PDP'da 2 oy bepul stajirovka
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              Kursga yozilish
+            </button>
+
+            <!-- Yellow Circle Decoration -->
+            <div
+              class="absolute -right-24 -bottom-24 w-48 h-48 bg-yellow-400 rounded-full opacity-20"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- main 2 -->
+
+  </body>
+</html>
