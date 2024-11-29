@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDP Academy</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="Mehriddin.js" defer></script>
     <script>
       tailwind.config = {
         theme: {
@@ -26,24 +27,64 @@
     />
 
     <style>
-      .marquee {
-        overflow: hidden;
-        white-space: nowrap;
-        position: relative;
-      }
+            .marquee {
+              overflow: hidden;
+              white-space: nowrap;
+              position: relative;
+            }
 
-      .marquee-content {
-        display: inline-block;
-        animation: marquee 30s linear infinite;
-      }
+            .marquee-content {
+              display: inline-flex; /* Flexbox for proper alignment */
+              animation: marquee 30s linear infinite;
+            }
 
-      @keyframes marquee {
+            @keyframes marquee {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+
+            /* Styling for images */
+            .marquee img {
+              transition: transform 0.3s ease;
+              width: 100px; /* Adjust as needed */
+              height: auto;
+            }
+
+            .marquee img:hover {
+              transform: scale(1.1); /* Zoom effect on hover */
+            }
+            @keyframes scroll {
         0% {
           transform: translateX(0);
         }
         100% {
-          transform: translateX(-50%);
+          transform: translateX(calc(-250px * 8));
         }
+      }
+
+      .scroll-container {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .scroll-content {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: calc(250px * 16);
+      }
+
+      .feature-item {
+        width: 250px;
+        flex-shrink: 0;
+      }
+
+      /* Hover effekti uchun */
+      .feature-item:hover {
+        animation-play-state: paused;
       }
     </style>
   </head>
@@ -116,58 +157,7 @@
       <!-- Partners Marquee -->
       <div class="marquee">
         <div class="marquee-content">
-          <div class="flex items-center gap-16 py-8">
-            <img
-              src="https://api.logobank.uz/media/logos_png/asaxiy-01.png"
-              alt="Asaxiy"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://api.logobank.uz/media/logos_png/%D0%A3%D0%B7%D0%BF%D1%80%D0%BE%D0%BC%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%B1%D0%B0%D0%BD%D0%BA-01.png"
-              alt="SQB"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://cbu.uz/upload/iblock/8ae/image_2022_08_01_15_35_28.png"
-              alt="Asakabank"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://api.logobank.uz/media/logos_png/infin-01.png"
-              alt="InfinBank"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png"
-              alt="Visa"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://marketing.uz/uploads/articles/2767/article-original.png"
-              alt="Tenge Bank"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://api.logobank.uz/media/logos_png/Kadastr_agentligi-01.png"
-              alt="Kadastr"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Upwork-logo.svg/2560px-Upwork-logo.svg.png"
-              alt="Upwork"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://api.logobank.uz/media/logos_png/Uzum-01.png"
-              alt="Uzum"
-              class="h-10 transition-all"
-            />
-            <img
-              src="https://api.logobank.uz/media/logos_png/Click-01_hjB080W.png"
-              alt="Click"
-              class="h-10 transition-all"
-            />
-          </div>
+          <div class="flex items-center gap-16 py-8" id="hamkorlar"></div>
         </div>
       </div>
     </div>
@@ -520,52 +510,49 @@
       <div class="flex align-center justify-center">
         <p class="text-5xl text-black font-bold">Student's feedback</p>
       </div>
-      <div class="flex align-center justify-center">
-        <p class="text-gray-800 mb-12 max-w-3xl align-center justify-center">
+      <div class="flex align-center justify-center mt-5">
+        <p class="text-gray-800 mb-12 max-w-3xl text-center">
           IT sohasiga kirish uchun eng yaxshi kurslar. Bir necha oy ichida siz
           noldan mutaxassis darajasiga yetishingiz, portfolio yig’ishingiz va
           karyerangizni boshlashingiz mumkin.
         </p>
       </div>
+      <div class="flex justify-center gap-5 pb-10">
+        <div>
+          <img
+            src="https://attachment.pdp.uz/media/data1/uploads/files/2023/December/19/17/fcbc32e1-d20d-4460-835c-fbab87b3fb87.png"
+            alt=""
+            class="imgss"
+          />
+        </div>
+        <div>
+          <img
+            src="https://attachment.pdp.uz/media/data1/uploads/files/2023/December/19/17/b0df5d11-087b-4a6f-a041-c03afb5c8feb.png"
+            alt=""
+            class="imgss"
+          />
+        </div>
+        <div>
+          <img
+            src="https://attachment.pdp.uz/media/data1/uploads/files/2023/December/19/17/4304bbb5-549c-40ea-93d4-f0df98982009.png"
+            alt=""
+            class="imgss"
+          />
+        </div>
+      </div>
     </div>
 
-    <script>
-      function toggleMode(mode) {
-        const standartBtn = document.getElementById("standart");
-        const bootcampBtn = document.getElementById("bootcamp");
-
-        if (mode === "standart") {
-          standartBtn.classList.add(
-            "bg-green-500",
-            "text-white",
-            "text-xl",
-            "shadow-md"
-          );
-          standartBtn.classList.remove("text-gray-700");
-          bootcampBtn.classList.remove(
-            "bg-green-500",
-            "text-white",
-            "text-xl",
-            "shadow-md"
-          );
-          bootcampBtn.classList.add("text-gray-700");
-        } else {
-          bootcampBtn.classList.add(
-            "bg-green-500",
-            "text-white",
-            "text-xl",
-            "shadow-md"
-          );
-          bootcampBtn.classList.remove("text-gray-700");
-          standartBtn.classList.remove(
-            "bg-green-500",
-            "text-white",
-            "text-xl",
-            "shadow-md"
-          );
-          standartBtn.classList.add("text-gray-700");
-        }
-      }
-    </script>
+    <div class="mt-5">
+      <section class="py-16 px-4">
+        <h2 class="text-3xl font-semibold text-center mb-12 text-gray-800">
+          AFZALLIKLARIMIZ
+        </h2>
+        <div class="marquee">
+          <div class="marquee-content">
+            <div class="flex items-center gap-16 py-8" id="afzallik-img"></div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
