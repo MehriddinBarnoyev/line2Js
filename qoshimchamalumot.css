@@ -1,0 +1,143 @@
+
+
+.malumot {
+    font-family: Arial, sans-serif;
+    background-color: #1a2642;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #2a375f;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #ffd700;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.subtitle {
+    color: #8b95af;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.form-group {
+    display: flex;
+    align-items: center; /* Vertikal o'rtalash */
+    justify-content: center; /* Gorizontal o'rtalash */
+    gap: 20px; /* Qatorlar orasidagi masofa */
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+label {
+    display: none; /* Yorliqni yashirish */
+}
+
+input {
+    flex: 1;
+    max-width: 250px; /* Maydon kengligini cheklash */
+    padding: 12px 15px;
+    border: 1px solid #2a375f;
+    border-radius: 6px;
+    background-color: #1a2642;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3a4875;
+}
+
+.phone-input {
+    display: flex;
+    align-items: center;
+    background-color: #1a2642;
+    border: 1px solid #2a375f;
+    border-radius: 6px;
+}
+
+.phone-input input {
+    border: none;
+    flex: 1;
+}
+
+.prefix {
+    color: #8b95af;
+    padding: 0 15px;
+    border-right: 1px solid #2a375f;
+}
+
+.submit-btn {
+    background-color: #00c853;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 14px 40px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #00b34a;
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+}
+
+/* Error states */
+input.error {
+    border-color: #ff4444;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.error-message.visible {
+    display: block;
+}
+
+/* Mobil ekran uchun optimallashtirish */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .form-group {
+        flex-direction: column; /* Kichik ekranlarda qatorlarni ustma-ust joylashtirish */
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
+
+    input {
+        max-width: 100%; /* Maydon kengligini moslashtirish */
+    }
+}
