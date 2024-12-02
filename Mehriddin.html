@@ -27,37 +27,37 @@
     />
 
     <style>
-            .marquee {
-              overflow: hidden;
-              white-space: nowrap;
-              position: relative;
-            }
+      .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+      }
 
-            .marquee-content {
-              display: inline-flex; /* Flexbox for proper alignment */
-              animation: marquee 30s linear infinite;
-            }
+      .marquee-content {
+        display: inline-flex; /* Flexbox for proper alignment */
+        animation: marquee 30s linear infinite;
+      }
 
-            @keyframes marquee {
-              0% {
-                transform: translateX(0);
-              }
-              100% {
-                transform: translateX(-100%);
-              }
-            }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
 
-            /* Styling for images */
-            .marquee img {
-              transition: transform 0.3s ease;
-              width: 100px; /* Adjust as needed */
-              height: auto;
-            }
+      /* Styling for images */
+      .marquee img {
+        transition: transform 0.3s ease;
+        width: 100px; /* Adjust as needed */
+        height: auto;
+      }
 
-            .marquee img:hover {
-              transform: scale(1.1); /* Zoom effect on hover */
-            }
-            @keyframes scroll {
+      .marquee img:hover {
+        transform: scale(1.1); /* Zoom effect on hover */
+      }
+      @keyframes scroll {
         0% {
           transform: translateX(0);
         }
