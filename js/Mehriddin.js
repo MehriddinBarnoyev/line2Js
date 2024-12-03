@@ -74,13 +74,6 @@ const images = [
     alt: "Click",
   },
 ];
-const hamkorlar = document.getElementById("hamkorlar");
-hamkorlar.innerHTML = images
-  .map(
-    (image) =>
-      `<img src="${image.src}" alt="${image.alt}" class="w-32 h-32 object-contain">`
-  )
-  .join("");
 
 const afzallik = [
   {
@@ -127,6 +120,15 @@ const afzallik = [
 
 const afzallikLar = document.getElementById("afzallik-img");
 
+const hamkorlar = document.getElementById("hamkorlar");
+hamkorlar.innerHTML = images
+  .map(
+    (image) =>
+      `<img src="${image.src}" alt="${image.alt}" class="w-32 h-32 object-contain">`
+  )
+  .join("");
+
+  
 afzallikLar.innerHTML = afzallik
   .map(
     (feature) => `
