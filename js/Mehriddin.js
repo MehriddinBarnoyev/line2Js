@@ -128,8 +128,8 @@ const afzallik = [
 const afzallikLar = document.getElementById("afzallik-img");
 
 afzallikLar.innerHTML = afzallik
-    .map(
-        (feature) => `
+  .map(
+    (feature) => `
         <div class="flex-shrink-0 flex flex-col items-center gap-4">
             <div class="bg-green-50 p-6 rounded-full w-24 h-24 flex items-center justify-center">
                 <img src="${feature.src}" alt="${feature.alt}" class="w-10 h-10">
@@ -137,5 +137,5 @@ afzallikLar.innerHTML = afzallik
             <p class="text-sm text-center text-gray-700">${feature.alt}</p>
         </div>
     `
-    )
-    .join("");
+  )
+  .join("");

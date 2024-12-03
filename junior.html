@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Junior Loyihasi</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/junior.js" defer></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00c508",
+              secondary: "#1F2937",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+      }
+
+      .marquee-content {
+        display: inline-flex; /* Flexbox for proper alignment */
+        animation: marquee 30s linear infinite;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      /* Styling for images */
+      .marquee img {
+        transition: transform 0.3s ease;
+        width: 100px; /* Adjust as needed */
+        height: auto;
+      }
+
+      .marquee img:hover {
+        transform: scale(1.1); /* Zoom effect on hover */
+      }
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 8));
+        }
+      }
+
+      .scroll-container {
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .scroll-content {
+        display: flex;
+        animation: scroll 30s linear infinite;
+        width: calc(250px * 16);
+      }
+
+      .feature-item {
+        width: 250px;
+        flex-shrink: 0;
+      }
+
+      /* Hover effekti uchun */
+      .feature-item:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="bg-white shadow">
+      <div
+        class="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between"
+      >
+        <div class="flex items-center gap-8">
+          <a href="/" class="flex items-center gap-2">
+            <div class="w-10 h-10 -500"></div>
+            <img
+              src="https://pdp.uz/static/media/dark-logo.b60d4801fba35368079b1552cb52c715.svg"
+              alt=""
+            />
+          </a>
+          <div class="hidden md:flex gap-6">
+            <a href="Humoyun.html" class="text-gray-700 hover:text-gray-900"
+              >Online kurslar</a
+            >
+            <a href="Mehriddin.html" class="text-gray-700 hover:text-gray-900"
+              >Offline kurslar</a
+            >
+            <a href="junior.html" class="text-gray-700 hover:text-gray-900"
+              >"Junior" loyihasi</a
+            >
+          </div>
+        </div>
+        <a
+          href="tel:+998787774747"
+          class="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full hover:bg-green-600 transition-colors"
+        >
+          <i class="fa-solid fa-phone"></i> +998 (78) 777 47 47
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <section>
+        <div class="container mx-auto px-4 pt-16 pb-[110px]">
+          <div class="max-w-5xl flex flex-col gap-4 mx-auto">
+            <span
+              class="text-xs py-1 px-4 bg-[#e6faee] rounded-[47px] block mx-auto w-fit"
+              >PDP Junior</span
+            >
+            <h2
+              class="text-xl md:text-2xl lg:text-[40px] font-bold leading-[150%] text-center"
+            >
+              PDP Junior — FARZANDINGIZ KELAJAGI UCHUN TO'G'RI TANLOV!
+            </h2>
+            <p class="text-center text-[#7e7e7e] text-sm sm:text-lg">
+              "PDP Junior" 5 yildan beri 8-17 yoshdagi dasturchilarni dasturlash
+              hamda tanqidiy fikrlash bo'yicha ko'nikmalarini shakllantirib, IT
+              sohasida kichik ilova hamda o'yinlar ishlab chiqarishlariga
+              yaqindan yordam berib kelyapti
+            </p>
+            <button
+              class="py-3 px-8 bg-[#00c508] text-white text-base rounded-3xl w-fit mx-auto hover:opacity-80 transition duration-300"
+            >
+              Bepul konsultatsiya olish
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 px-4">
+        <div class="marquee">
+          <div class="marquee-content">
+            <div class="flex items-center gap-16 py-8" id="afzallik-img"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Courses -->
+      <section class="bg-secondary text-white">
+        <div class="container mx-auto px-4 py-12">
+          <!-- Header Section -->
+          <div class="mb-8">
+            <h1 class="text-primary text-4xl font-bold mb-6">
+              PDP Junior'dagi hozirda mavjud kurslar bilan tanishing:
+            </h1>
+            <p class="text-gray-300 text-lg">
+              PDP Junior yuksak sifatli, interaktiv darslar orqali dasturlashga
+              qiziqgan yoshlarni o'qitishga qaratligan eng innovatsion dastur.
+            </p>
+          </div>
+
+          <!-- Python Course Card -->
+          <div class="bg-[#1a1f2e] rounded-2xl p-8 mb-5">
+            <h2 class="text-[#FFD700] text-3xl font-bold mb-6">Python</h2>
+            <p class="text-gray-300 mb-8">
+              Bolalar Python dasturlash tili misolida boshlang'ich dasturlash
+              asoslarini mukammal o'rgangan holda bilim va ko'nikmalar hosil
+              qiladi. Ushbu kurs dasturlash sohasining asosiy tushunchalarini
+              mustahkamlab, farzandingizda yangi bilim va ko'nikmalar hosil
+              qiladi.
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div class="space-y-2">
+                <p class="text-gray-400">Modullar soni</p>
+                <p class="text-2xl font-bold">11</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Soatlari</p>
+                <p class="text-2xl font-bold">1.5 soat</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Davomiyligi</p>
+                <p class="text-2xl font-bold">132 dars</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Yosh chegarasi</p>
+                <p class="text-2xl font-bold">8-15</p>
+              </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="bg-[#151923] rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4">Imkoniyatlar</h3>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  Kurs kim tomonidan o'tiladi: O'z sohasining mutaxassisi
+                  bo'lgan, pedagogik jihatdan bolalarga qiziqarli qilib dars
+                  o'ta oladigan mentorlar tomonidan darslar o'tiladi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend Course Card -->
+          <div class="bg-[#1a1f2e] rounded-2xl p-8 mb-5">
+            <h2 class="text-[#FFD700] text-3xl font-bold mb-6">Frontend</h2>
+            <p class="text-gray-300 mb-8">
+              Frontend development "PDP JUNIOR" loyihasining kurslaridan biri
+              hisoblanadi. Bu kursda o’quvchilar web-sahifalarning bizga
+              ko'rinadigan vizual qismini ishlab chiqishadi.
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div class="space-y-2">
+                <p class="text-gray-400">Modullar soni</p>
+                <p class="text-2xl font-bold">11</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Soatlari</p>
+                <p class="text-2xl font-bold">1.5 soat</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Davomiyligi</p>
+                <p class="text-2xl font-bold">132 dars</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Yosh chegarasi</p>
+                <p class="text-2xl font-bold">8-15</p>
+              </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="bg-[#151923] rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4">Imkoniyatlar</h3>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  Kurs kim tomonidan o'tiladi: O'z sohasining mutaxassisi
+                  bo'lgan, pedagogik jihatdan bolalarga qiziqarli qilib dars
+                  o'ta oladigan mentorlar tomonidan darslar o'tiladi
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Generation Course Card -->
+          <div class="bg-[#1a1f2e] rounded-2xl p-8">
+            <h2 class="text-[#FFD700] text-3xl font-bold mb-6">Generation</h2>
+            <p class="text-gray-300 mb-8">
+              Generation kursida o’quvchilar jamoa bo'lib ishlash, Muammolarni
+              hal qilish algoritmlari tuza olish ko'nikmalariga ega bo’ladilar,
+              shuningdek o'quvchilar kurs davomida Leetcode, HackerRank,
+              CodeForce platformalarida masala ishlab reyting olish imkoniga ega
+              bo'ladi.
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+              <div class="space-y-2">
+                <p class="text-gray-400">Modullar soni</p>
+                <p class="text-2xl font-bold">11</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Soatlari</p>
+                <p class="text-2xl font-bold">1.5 soat</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Davomiyligi</p>
+                <p class="text-2xl font-bold">132 dars</p>
+              </div>
+              <div class="space-y-2">
+                <p class="text-gray-400">Yosh chegarasi</p>
+                <p class="text-2xl font-bold">8-15</p>
+              </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="bg-[#151923] rounded-xl p-6">
+              <h3 class="text-xl font-semibold mb-4">Imkoniyatlar</h3>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  Dasturchilarda juda muhim bo'lgan algoritmik fikrlashni
+                  oshirish
+                </p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  IT olamida mashhur bo'lgan problem-solving (muammoga yechim
+                  berish) va DSA (Kriptografik algoritm) bo'yicha platformalar
+                  bilan tanishtirish va ularda ishlash ko'nikmalarini
+                  shakillantirish
+                </p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  Kelajakda FAANG* kompaniyalargacha yetib borish va ishlash
+                  uchun kuchli asosiy bilimlarni berish ishlari amalga
+                  oshiriladi
+                </p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <svg
+                  class="w-6 h-6 text-primary mt-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M20 7l-8 8-4-4"
+                  ></path>
+                </svg>
+                <p class="text-gray-300 flex-1">
+                  Kurs kim tomonidan o'tiladi: O'z sohasining mutaxassisi
+                  bo'lgan, pedagogik jihatdan bolalarga qiziqarli qilib dars
+                  o'ta oladigan mentor'lar tomonidan darslar o'tiladi
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Parent's Feedback Section -->
+      <section class="mb-20 pt-20">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-6">Parent's Feedback</h2>
+          <p class="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Ushbu bo'limda siz Farzandi kelajagiga befarq bo'lmagan va
+            farzandini talab eng yuqori bo'lgan dasturlash sohasini o'rganishni
+            maqsad qilgan ota-onalar fikrlari bilan tanishasiz.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feedback Cards -->
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/parent_1.add56cb58e4ab9cfb6fe.png"
+                  alt="Parent feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/parent_2.420920f2419622c54b7f.png"
+                  alt="Parent feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/parent_3.9a9167e16dc40bec1969.png"
+                  alt="Parent feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Students Section -->
+      <section class="pb-20">
+        <div class="container mx-auto">
+          <h2 class="text-4xl font-bold text-center mb-6">Our Students</h2>
+          <p class="text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Ushbu bo'limda, bizning talim muassasamizda o'qish jarayonini
+            yaxshilash va ko'rsatilayotgan faoliyatlarimizni baholash uchun
+            o'quvchilarimizning fikrlari va mulohazalari joylashgan.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Student Cards -->
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/pupil-1.9c9698fd0843765bddf6.png"
+                  alt="Student feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/pupil-2.62e3da03c782bb33f428.png"
+                  alt="Student feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="rounded-xl relative">
+              <div class="h-full rounded-lg overflow-hidden mb-4">
+                <img
+                  src="https://pdp.uz/static/media/pupil-3.963a9b5f469886f8c50c.png"
+                  alt="Student feedback"
+                  class="w-full h-full object-cover"
+                />
+                <div
+                  class="absolute inset-0 bg-black/20 flex items-center justify-center rounded-xl"
+                >
+                  <button
+                    class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-6 h-6 text-white"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
